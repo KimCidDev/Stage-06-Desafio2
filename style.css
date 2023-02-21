@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  /* FONTS */
+  --ff-primary: 'Poppins', sans-serif;
+
+
+
+  /* COLORS*/
+  --font-color: #303030;
+  --hue: 194;
+  --primary-color: hsl(var(--hue), 100%, 63%);
+
+
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+body * {
+  font-family: var(--ff-primary);
+  color: var(--font-color);
+}
+
+.sr-only {
+  position: absolute;
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  z-index: -1000;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  margin: 2.5rem 0;
+}
+
+header h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.searchBox {
+  display: flex;
+  justify-content: center;
+}
+
+.searchBox input {
+  height: 3.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem 0 0 0.4rem;
+
+  padding: 0 0.8rem;
+}
+
+.searchBox button {
+  height: 3.2rem;
+  padding: 0 1.5rem;
+  border: none;
+  border-radius: 0 0.4rem 0.4rem 0;
+  background-color: var(--primary-color);
+}
+
+.searchBox button:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+} 
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table * {
+  font-size: 1.4rem;
+}
+
+table thead tr th {
+  text-align: left;
+  padding: 1.5rem;
+
+
+  background-color: var(--primary-color);
+  font-weight: normal;
+
+}
+
+table thead tr th:first-child {
+  border-radius: .4rem 0 0 0;
+} 
+
+table thead tr th:last-child {
+  border-radius: 0 .4rem 0 0;
+} 
+
+table tbody tr:nth-child(odd) {
+  background-color: #e7e7eb;
+} 
+
+table tbody tr:nth-child(even) {
+  background-color: #faf7f7;
+} 
+
+table tbody tr td {
+  padding: 1.5rem;
+} 
+
+.userInfo img {
+  height: 5rem;
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+table tbody .userInfo a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+table tbody .userInfo a p {
+  font-weight: bold;
+}
+
+table tbody .userInfo {
+  display: flex;
+  align-items: center;
+  gap:1rem;
+
+
+}
+
+#removeButton {
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+}
